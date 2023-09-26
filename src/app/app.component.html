@@ -1,0 +1,14 @@
+{{title}}
+<button (click)="getVal()">test</button>
+<input value="title">
+<input [value]="title">
+<form>
+  name : <input type="text"  #x> {{x}}
+  <button type="button" (click)="setTitle(x.value)" >submit</button>
+</form>
+<form>
+  name : <input type="text" [value]="title"  (keyup)="setTitle(x1.value)"  #x1> {{x}}
+  </form>
+  <form>
+    name : <input type="text" name="name" [(ngModel)]="title"> {{x1}}
+  </form>
