@@ -9,6 +9,7 @@ import { SlideComponent } from './slide/slide.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { FooterComponent } from './footer/footer.component';
 import { UsersComponent } from './users/users.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { UsersComponent } from './users/users.component';
     SlideComponent,
     UserListComponent,
     FooterComponent,
-    UsersComponent
+    UsersComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

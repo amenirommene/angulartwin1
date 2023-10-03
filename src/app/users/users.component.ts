@@ -7,7 +7,7 @@ import { User } from '../models/user';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent {
-
+ category : string = "";
   delete(i:number){
     this.list.splice(i,1);
   }
