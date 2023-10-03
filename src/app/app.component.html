@@ -1,7 +1,8 @@
-{{title}}
+<!---{{title}}
 <button (click)="getVal()">test</button>
 <input value="title">
 <input [value]="title">
+
 <form>
   name : <input type="text"  #x> {{x}}
   <button type="button" (click)="setTitle(x.value)" >submit</button>
@@ -11,4 +12,53 @@
   </form>
   <form>
     name : <input type="text" name="name" [(ngModel)]="title"> {{x1}}
-  </form>
+  </form>---->
+  <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ProjetProduit</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+<div class="container">
+  <div class="container" id="body">
+    <!---start navbar--->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <b><img src="../assets/images/store.jpg" id="logo">My Store</b>
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#">User Management</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Product Management</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Provider Management</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <br>
+    <!---end navbar--->
+    <!---start slide--->
+    <app-slide></app-slide>
+    <!---end slide--->
+    <!---start usersList section--->
+    <app-user-list></app-user-list>
+   
+    <!---end usersList section--->
+  </div>
+  <app-users></app-users>
+<app-footer></app-footer>
+ 
+</div>
+</body>
+</html>

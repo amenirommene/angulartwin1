@@ -1,0 +1,14 @@
+<table>
+    <tr> <th>id
+    </th>
+    </tr>
+    <tr *ngFor="let u of list; 
+    let i=index; let j=first; let k=last; 
+    let o=odd; let v=even">
+        <td>{{u.idCustomer}} 
+            ** {{i}} ** {{j}}</td> 
+        <button [disabled]="u.accountCategory == 'Admin'" (click)="delete(i)">Delete</button>
+        <button [hidden]="u.accountCategory == 'Admin'" (click)="delete(i)">Delete</button>
+        <button *ngIf="u.accountCategory != 'Admin'" (click)="delete(i)">Delete</button>
+    </tr>
+</table>
