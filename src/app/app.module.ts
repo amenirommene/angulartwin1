@@ -10,6 +10,7 @@ import { UserListComponent } from './user-list/user-list.component';
 import { FooterComponent } from './footer/footer.component';
 import { UsersComponent } from './users/users.component';
 import { HeaderComponent } from './header/header.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -19,10 +20,11 @@ import { HeaderComponent } from './header/header.component';
     UserListComponent,
     FooterComponent,
     UsersComponent,
-    HeaderComponent
+    HeaderComponent,
+    NotFoundComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule, //par défaut
     AppRoutingModule,
     FormsModule
   ],

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { User } from '../models/user';
 
 @Component({
@@ -7,6 +8,17 @@ import { User } from '../models/user';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent {
+
+  //injecter le service ActivatedRoute 
+constructor(private ac:ActivatedRoute){}
+
+ngOnInit(){ //méthode appelé juste après la création du composant
+  console.log("je suis ngOnInit");
+//exemple1: avec snapshot
+  //console.log(this.ac.snapshot.params['category']);
+  //exemple2: avec paramMap
+  this.ac.paramMap.subscribe(res=>{console.log(res.get('category')); this.category=res.get('category')});
+}
  category : string = "";
   delete(i:number){
     this.list.splice(i,1);
@@ -61,7 +73,7 @@ list : User[]= [
     firstName: "Robert",  
     lastName: "Downey",  
     birthDate: "1999-06-30",  
-    accountCategory: "Blocked Account",  
+    accountCategory: "Blocked",  
     email: "robert@nicholson.com",  
     password: "test",  
     picture: "https://bootdey.com/img/Content/avatar/avatar5.png",  
