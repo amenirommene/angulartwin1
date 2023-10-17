@@ -9,6 +9,8 @@ import { SlideComponent } from './slide/slide.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { UserModule } from './user/user.module';
+import { UserService } from './services/user.service';
 
 @NgModule({
   declarations: [
@@ -22,9 +24,10 @@ import { NotFoundComponent } from './not-found/not-found.component';
   imports: [
     BrowserModule, //par défaut
     AppRoutingModule,
+    UserModule
     //FormsModule
   ],
-  providers: [],
+ // providers: [UserService],//équivalent à prividedIn :root
   bootstrap: [AppComponent]
 })
 export class AppModule { }
