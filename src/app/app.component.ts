@@ -10,7 +10,7 @@ import { UserService } from './services/user.service';
 export class AppComponent {
 
   //injecter le service UserService sous le nom de us
-  constructor(/*private us:UserService*/){
+  constructor(private us:UserService){
     console.log("constructor");
   }
   ngOnInit(){ //méthode hook 

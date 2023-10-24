@@ -7,7 +7,8 @@ import { UserService } from 'src/app/services/user.service';
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
-  styleUrls: ['./users.component.css']
+  styleUrls: ['./users.component.css'],
+  providers:[UserService]
 })
 export class UsersComponent {
 list:User[];
@@ -16,6 +17,7 @@ constructor(private ac:ActivatedRoute, private us:UserService){}
 
 ngOnInit(){ //méthode appelé juste après la création du composant
   console.log("je suis ngOnInit");
+  console.log(this.us.getNb());
   this.list=this.us.getUsers();
 //exemple1: avec snapshot
   //console.log(this.ac.snapshot.params['category']);

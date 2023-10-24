@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 import { User } from '../models/user';
 import { UserModule } from '../user/user.module';
 
-@Injectable(/*{
-  providedIn: UserModule
-}*/)
+@Injectable({
+  providedIn: 'root'
+})
 export class UserService {
 
   constructor() { 
@@ -79,6 +79,6 @@ export class UserService {
   
   }
   getAllUsers(){
-    
+
   }
 }

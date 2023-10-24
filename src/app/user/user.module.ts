@@ -19,6 +19,6 @@ import { UserService } from '../services/user.service';
     UserRoutingModule,
     FormsModule
   ],
-  providers: [UserService]
+  providers: []
 })
 export class UserModule { }
