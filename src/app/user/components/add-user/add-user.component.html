@@ -1,0 +1,37 @@
+
+<form #form="ngForm">
+FirstName:<input (keyup)="f(firstname.errors)" name="firstname" pattern="[a-zA-Z]*" minlength="10" required type="text"  
+[(ngModel)]="user.firstName" #firstname="ngModel"><br>
+<div *ngIf="firstname.touched && firstname.invalid">
+    <div *ngIf="firstname.errors['required']">
+        Firstaname obligatoire
+    </div>
+    <div *ngIf="firstname.errors['minlength']">
+Firstaname contient au minimum 
+{{firstname.errors['minlength']['requiredLength']}} caractères
+ alors que vous avez tapé 
+ {{firstname.errors['minlength']['actualLength']}}
+    </div>
+    <div *ngIf="firstname.errors['pattern']">
+        Firstaname ne contient que des lettres
+    </div>
+</div>
+LastName:<input name="lastname" pattern="[a-zA-Z]*" minlength="3" required type="text"  [(ngModel)]="user.lastName" #lastname="ngModel"><br>
+Birthdate<input name="birthdate" required type="date"  [(ngModel)]="user.birthDate" #birthdate="ngModel"><br>
+Password: <input name="password" required  type="password"  [(ngModel)]="user.password" #password="ngModel"><br>
+Email: <input name="email" type="email"  [(ngModel)]="user.email" pattern="^[a-zA-Z0-9._-]+@gmail.com" #email="ngModel">
+<br>
+<div *ngIf="email.invalid">
+    Email invalid
+</div>
+Category: <input  name="category"  pattern="Customer" required type="text"  [(ngModel)]="user.accountCategory" #category="ngModel"><br>
+<div *ngIf="category.invalid">La catégorie doit être égale à Customer</div>
+Profession : <input name="profession" required type="text"  [(ngModel)]="user.profession" #profession="ngModel"><br>
+<button [disabled]="form.invalid">Save</button>
+</form>
+{{firstname.errors}}<br>
+valid: {{firstname.valid}} <br>
+touched/untouched: {{firstname.touched}} / {{firstname.untouched}} <br>
+dirty/pristine: {{firstname.dirty}} / {{firstname.pristine}}
+
+
