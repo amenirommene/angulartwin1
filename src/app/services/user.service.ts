@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { count, Observable } from 'rxjs';
 import { User } from '../models/user';
 import { UserModule } from '../user/user.module';
 
@@ -7,7 +9,7 @@ import { UserModule } from '../user/user.module';
 })
 export class UserService {
 
-  constructor() { 
+  constructor(private _http:HttpClient) { 
     console.log("je suis user service");
   }
 
@@ -78,7 +80,17 @@ export class UserService {
       
   
   }
-  getAllUsers(){
+  getAllUsers():Observable<User[]>{
+
+    return this._http.get<User[]>("http://localhost:3000/users");
+    
+
+  }
+
+  addUser($user:User):Observable<User>{
+
+    return this._http.post<User>("http://localhost:3000/users",$user);
+    
 
   }
 }

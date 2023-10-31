@@ -14,6 +14,7 @@ export class AppComponent {
     console.log("constructor");
   }
   ngOnInit(){ //méthode hook 
+   // console.log(this.us.getAllUsers());
    // console.log("ngOnInit");
    // console.log(this.title);
    // console.log("appcomponent-"+this.us.getNb());

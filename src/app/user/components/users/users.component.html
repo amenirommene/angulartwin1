@@ -6,12 +6,13 @@ Catégorie : <input type="text" [(ngModel)]="category" #v> {{v.value}}
     <tr *ngFor="let u of list; 
     let i=index; let j=first; let k=last; 
     let o=odd; let v=even" >
-    <div *ngIf="u.accountCategory == category">
-        <td>{{u.idCustomer}} 
+   <!--- <div *ngIf="u.accountCategory == category">---->
+        <td>idCustomer : {{u.id}}  ** {{u.firstName}}
             ** {{i}} ** {{j}}</td> 
         <button [disabled]="u.accountCategory == 'Admin'" (click)="delete(i)">Delete</button>
         <button [hidden]="u.accountCategory == 'Admin'" (click)="delete(i)">Delete</button>
         <button *ngIf="u.accountCategory != 'Admin'" (click)="delete(i)">Delete</button>
-    </div>
+  <!---  </div>---->
     </tr>
 </table>
+<button (click)="add()">add</button>

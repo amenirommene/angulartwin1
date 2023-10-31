@@ -9,9 +9,7 @@ import { SlideComponent } from './slide/slide.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { UserModule } from './user/user.module';
-import { UserService } from './services/user.service';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,8 +22,8 @@ import { UserService } from './services/user.service';
   imports: [
     BrowserModule, //par défaut
     AppRoutingModule,
-    UserModule
     //FormsModule
+    HttpClientModule
   ],
  // providers: [UserService],//équivalent à prividedIn :root
   bootstrap: [AppComponent]
