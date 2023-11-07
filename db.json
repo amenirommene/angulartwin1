@@ -59,6 +59,46 @@
       "firstName": "f1",
       "lastName": "l1",
       "id": 6
+    },
+    {
+      "accountCategory": "Customer",
+      "firstName": "narimennarimen",
+      "lastName": "azertyuiop",
+      "birthDate": "2023-11-09",
+      "password": "^sdfghjklm",
+      "email": "ameni.rommene@gmail.com",
+      "profession": "Student",
+      "id": 7
+    },
+    {
+      "accountCategory": "Customer",
+      "firstName": "narimennarimen",
+      "lastName": "azertyuiop",
+      "birthDate": "2023-11-09",
+      "password": "^sdfghjklm",
+      "email": "ameni.rommene@gmail.com",
+      "profession": "Student",
+      "id": 8
+    },
+    {
+      "accountCategory": "Customer",
+      "firstName": "azertyuiop",
+      "lastName": "sdfgthjk",
+      "birthDate": "2023-11-24",
+      "password": "sdfghjkl",
+      "email": "ameni.rommene@gmail.com",
+      "profession": "sdfghjk",
+      "id": 9
+    },
+    {
+      "accountCategory": "Customer",
+      "firstName": "dfghjklmfghjkl",
+      "lastName": "sdfghjklmhhh",
+      "birthDate": "2023-11-17",
+      "password": "qsdfghjkl",
+      "email": "ameni.rommene@gmail.com",
+      "profession": "cfvghjkl",
+      "id": 10
     }
   ],
   "posts": [

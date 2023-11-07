@@ -1,0 +1,31 @@
+
+<form [formGroup]="myForm">
+    <div formGroupName="groupe1">
+    FirstName:<input  type="text" formControlName="firstName"><br>
+    <div *ngIf="myForm.get('groupe1').get('firstName').touched && myForm.get('groupe1').get('firstName').invalid">
+    <div *ngIf="firstNameUser.errors['required']">
+    Champ obligatoire
+    </div>
+    <div *ngIf="firstNameUser.errors['minlength']">
+        Minimim {{ firstNameUser.errors['minlength']['requiredLength'] }}
+    </div>
+    <div *ngIf="firstNameUser.errors['pattern']">
+        le champ n'accepte que des lettres
+    </div>
+    
+    </div>
+    LastName:<input name="lastname" type="text" formControlName="lastName"><br>
+    Birthdate<input name="birthdate" type="date" formControlName="birthdate"><br>
+    Password: <input name="password" type="password" formControlName="password"><br>
+    Email: <input name="email" type="email" formControlName="email"> <br>
+    </div>
+    <div *ngIf="firstgroupe.valid">
+    Category: <input  name="category"  type="text" formControlName="category" ><br>
+    Profession : <input name="profession" type="text" formControlName="profession" ><br>
+</div>
+    <button [disabled]="myForm.invalid">Save</button>
+</form>
+    
+    
+    
+    
