@@ -28,6 +28,8 @@
     <app-header></app-header> <!--selector du composant HeaderComponent-->
    <router-outlet></router-outlet> <!---directive dont le rôle est d'afficher le composant-->
   </div>
+
+<app-test (prop2)="notif($event)" [prop1]="valTest"></app-test>
 <app-footer></app-footer> <!--selector du composant FooterComponent-->
  
 </div>

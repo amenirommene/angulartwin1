@@ -8,6 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserService } from '../services/user.service';
 import { AddUserComponent } from './components/add-user/add-user.component';
 import { AddUserReactiveComponent } from './components/add-user-reactive/add-user-reactive.component';
+import { AccountComponent } from './components/account/account.component';
 
 
 
@@ -16,7 +17,8 @@ import { AddUserReactiveComponent } from './components/add-user-reactive/add-use
     UsersComponent,
     UserListComponent,
     AddUserComponent,
-    AddUserReactiveComponent
+    AddUserReactiveComponent,
+    AccountComponent
   ],
   imports: [
     CommonModule, //par défaut : directive ngFor, ngIf, ngSwitch, ngClass, ngStyle, ....

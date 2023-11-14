@@ -9,10 +9,14 @@ import { UserService } from './services/user.service';
 })
 export class AppComponent {
 
+  valTest:string ="je suis input property";
   //injecter le service UserService sous le nom de us
   constructor(private us:UserService){
     console.log("constructor");
   }
+notif(n:string){
+  alert ("notif "+ n);
+}
   ngOnInit(){ //méthode hook 
    // console.log(this.us.getAllUsers());
    // console.log("ngOnInit");
