@@ -18,7 +18,9 @@ export class TestComponent implements OnInit {
   //proprité de sortie = evenement
   @Output() prop2 = new EventEmitter<string>();
   constructor() { }
-
+ngAfterViewInit(){
+  
+}
   ngOnInit(): void {
     console.log(this.prop1);
   }

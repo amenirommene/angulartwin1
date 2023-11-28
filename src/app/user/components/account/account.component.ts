@@ -6,6 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./account.component.css']
 })
 export class AccountComponent {
+  //@Input : décorateur de proprité
 @Input() image : string="";
 @Input() title: string="";
 @Input() category:string="";

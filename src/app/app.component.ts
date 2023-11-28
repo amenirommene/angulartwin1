@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { UserService } from './services/user.service';
+import { TestComponent } from './test/test.component';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,7 @@ import { UserService } from './services/user.service';
 })
 export class AppComponent {
 
+  @ViewChild(TestComponent) monfils:TestComponent;
   valTest:string ="je suis input property";
   //injecter le service UserService sous le nom de us
   constructor(private us:UserService){
@@ -17,7 +19,11 @@ export class AppComponent {
 notif(n:string){
   alert ("notif "+ n);
 }
-  ngOnInit(){ //méthode hook 
+ngAfterViewInit(){
+  console.log(this.monfils.name);
+}  
+ngOnInit(){ //méthode hook 
+  
    // console.log(this.us.getAllUsers());
    // console.log("ngOnInit");
    // console.log(this.title);
